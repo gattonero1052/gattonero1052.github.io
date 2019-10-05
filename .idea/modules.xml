@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/gatsby-advanced-starter.iml" filepath="$PROJECT_DIR$/gatsby-advanced-starter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../gatsby-site/gatsby-site.iml" filepath="$PROJECT_DIR$/../gatsby-site/gatsby-site.iml" />
-    </modules>
-  </component>
-</project>
