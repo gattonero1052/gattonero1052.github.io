@@ -1,0 +1,26 @@
+.tag-item{
+    background-color:white;
+    cursor:pointer;
+    display: inline-block;
+    opacity: .5;
+    border-radius: 9999px;
+    border: solid 2px;
+    font-size: 15px;
+    text-align: center;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
+    padding:3px 10px 6px 10px;
+    margin:5px 10px;
+    transition: opacity,background-color 300ms ease-in-out;
+}
+
+.tag-item:hover{
+    background-color: #eee;
+    opacity: 1;
+    transition: opacity,background-color 300ms ease-in-out;
+}
+
+.tag-list{
+    white-space: normal;
+}
