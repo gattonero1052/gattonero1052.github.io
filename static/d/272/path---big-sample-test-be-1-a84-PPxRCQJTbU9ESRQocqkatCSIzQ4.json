@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$slug1\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"/big-sample-test","nexttitle":"The Fallen Time","nextslug":"/the-fallen-time","prevtitle":"Birch in the Roses","prevslug":"/birch-in-the-roses"}}
