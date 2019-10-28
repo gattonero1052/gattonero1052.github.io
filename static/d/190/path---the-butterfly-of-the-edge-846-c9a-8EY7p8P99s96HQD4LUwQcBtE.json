@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$slug1\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"/the-butterfly-of-the-edge","nexttitle":"The Fairy's Witches","nextslug":"/the-fairys-witches","prevtitle":"Bold Mage","prevslug":"/bold-mage"}}

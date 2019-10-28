@@ -1,1 +1,0 @@
-{"errors":[{"message":"Variable \"$slug1\" of required type \"String!\" was not provided.","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"/random-project-4-with-super-long-title-phase-one","nexttitle":"Angels of Mist","nextslug":"/angels-of-mist","prevtitle":"The Fairy's Witches","prevslug":"/the-fairys-witches"}}
