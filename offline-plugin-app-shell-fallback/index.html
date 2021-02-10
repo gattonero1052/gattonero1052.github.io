@@ -1,8 +1,14 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.17.4"/><title data-react-helmet="true"></title><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><style type="text/css">
-    .anchor {
-      float: left;
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.32.3"/><title data-react-helmet="true"></title><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
       padding-right: 4px;
-      margin-left: -20px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
     }
     h1 .anchor svg,
     h2 .anchor svg,
@@ -32,7 +38,9 @@
       if (hash !== '') {
         var element = document.getElementById(hash)
         if (element) {
-          var offset = element.offsetTop
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
           // Wait for the browser to finish rendering before scrolling.
           setTimeout((function() {
             window.scrollTo(0, offset - 0)
@@ -40,7 +48,7 @@
         }
       }
     })
-  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#c62828"/><link rel="apple-touch-icon" sizes="192x192" href="/logos/logo-192x192.png"/><link rel="apple-touch-icon" sizes="512x512" href="/logos/logo-512x512.png"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link as="script" rel="preload" href="/component---node-modules-gatsby-plugin-offline-app-shell-js-19316ccd1abd2c798cfc.js"/><link as="script" rel="preload" href="/commons-b55b1d7c3fc751a1221f.js"/><link as="script" rel="preload" href="/app-cac4677763fc407d286b.js"/><link as="script" rel="preload" href="/webpack-runtime-01302c2bd3438bb54312.js"/><link as="fetch" rel="preload" href="/page-data\offline-plugin-app-shell-fallback\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"></div></div><script>
+  </script><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#c62828"/><link rel="apple-touch-icon" sizes="192x192" href="/logos/logo-192x192.png"/><link rel="apple-touch-icon" sizes="512x512" href="/logos/logo-512x512.png"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link as="script" rel="preload" href="/webpack-runtime-1d1560e970de0ddf3553.js"/><link as="script" rel="preload" href="/framework-40c3ff37f1ddd4cd3b04.js"/><link as="script" rel="preload" href="/app-26aab78b5e4be374ceb9.js"/><link as="script" rel="preload" href="/component---node-modules-gatsby-plugin-offline-app-shell-js-0da3df76b6bd6b573ad0.js"/><link as="fetch" rel="preload" href="/page-data\offline-plugin-app-shell-fallback\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
   
   
   if(true) {
@@ -56,4 +64,4 @@
       
       
       
-      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/offline-plugin-app-shell-fallback/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-cac4677763fc407d286b.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-19316ccd1abd2c798cfc.js"],"component---src-templates-post-jsx":["/component---src-templates-post-jsx-c61b58e63b3205e2ec46.js"],"component---src-templates-tag-jsx":["/component---src-templates-tag-jsx-757def8ad72964d67689.js"],"component---src-templates-category-jsx":["/component---src-templates-category-jsx-4dd4f607b5d11b8d8984.js"],"component---src-pages-about-jsx":["/component---src-pages-about-jsx-b6af9b9fdb330c2b544c.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-519f2669a87daf5e7c4b.js"],"component---src-pages-poker-js":["/component---src-pages-poker-js-199efe20b9fc4f79890e.js"]};/*]]>*/</script><script src="/webpack-runtime-01302c2bd3438bb54312.js" async=""></script><script src="/app-cac4677763fc407d286b.js" async=""></script><script src="/commons-b55b1d7c3fc751a1221f.js" async=""></script><script src="/component---node-modules-gatsby-plugin-offline-app-shell-js-19316ccd1abd2c798cfc.js" async=""></script></body></html>
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/offline-plugin-app-shell-fallback/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-a1f1b7ebeceef3f84942.js"],"app":["/app-26aab78b5e4be374ceb9.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-0da3df76b6bd6b573ad0.js"],"component---src-pages-about-jsx":["/component---src-pages-about-jsx-4c32e76cbd2cf366212f.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-7358836b0bd67d50c294.js"],"component---src-pages-poker-js":["/component---src-pages-poker-js-694d5f81fbc4ee33a9b0.js"],"component---src-templates-category-jsx":["/component---src-templates-category-jsx-4a00b9ce02fde10ab1ab.js"],"component---src-templates-post-jsx":["/component---src-templates-post-jsx-efd163f9713b21056b50.js"],"component---src-templates-tag-jsx":["/component---src-templates-tag-jsx-fbf426f4856681aa31f3.js"]};/*]]>*/</script><script src="/polyfill-a1f1b7ebeceef3f84942.js" nomodule=""></script><script src="/component---node-modules-gatsby-plugin-offline-app-shell-js-0da3df76b6bd6b573ad0.js" async=""></script><script src="/app-26aab78b5e4be374ceb9.js" async=""></script><script src="/framework-40c3ff37f1ddd4cd3b04.js" async=""></script><script src="/webpack-runtime-1d1560e970de0ddf3553.js" async=""></script></body></html>
