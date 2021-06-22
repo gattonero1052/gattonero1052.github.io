@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://mskf.work/FrontEnd/how-did-i-build-a-responsive-landing-page-using-tailwindcss</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/algorithm/calculator</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/Bash/bash-scripting-examples</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/Game/poker-game</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/Java/java-generics-tricky-code</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -24,6 +25,10 @@
 <url> <loc>https://mskf.work/algorithm/longest-palindrome-substring</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/2010/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/frontend/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/tags/calculator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/tags/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/tags/leetcode/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/tags/python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/bash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/中文/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/game/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,10 +37,8 @@
 <url> <loc>https://mskf.work/tags/pwa/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/web-game/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/generics/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/tags/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/math/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/string/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/tags/python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/linkedlist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/regular-expression/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/dfa/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -56,11 +59,10 @@
 <url> <loc>https://mskf.work/tags/tree/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/linear-time/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/categories/frontend/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/categories/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/categories/bash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/categories/game/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/categories/algorithm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/categories/java/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/poker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
