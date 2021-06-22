@@ -11,25 +11,36 @@ import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 
 class Index extends React.Component {
+  callBacks = {
+    refreshArticleList:undefined,
+    refreshTagList:undefined,
+    refreshTree:undefined
+  }
+
   refresh(){
     if(typeof this.refreshBindBack === 'function') this.refreshBindBack()
   }
 
-  refreshBinder(fn){
-    this.refreshBindBack = fn
+  dispatch(action,...params){
+    // console.log(arguments)
+      if(typeof this.callBacks[action] == 'function') this.callBacks[action](...params)
+  }
+
+  refreshBinder(binder){
+    this.callBacks = {...this.callBacks,...binder}
   }
 
   render() {
     //ignore drafts
-    const postEdges = this.props.data.allMarkdownRemark.edges.filter(edge=> !edge.node.frontmatter.draft)
+    const postEdges = this.props.data.allMdx.edges.filter(edge=> !edge.node.frontmatter.draft)
     return (
       <DndProvider backend={HTML5Backend}>
         <Layout>
           <div className="index-container">
             <Helmet title={config.siteTitle} />
             <SEO />
-            <Tree refreshBinder={this.refreshBinder.bind(this)}/>
-            <PostListing refresh={this.refresh.bind(this)} postEdges={postEdges} />
+            {/* <Tree refreshBinder={this.refreshBinder.bind(this)} dispatch={this.dispatch.bind(this)}/> */}
+            <PostListing refreshBinder= {this.refreshBinder.bind(this)} dispatch={this.dispatch.bind(this)} refresh={this.refresh.bind(this)} postEdges={postEdges} />
           </div>
         </Layout>
       </DndProvider>
@@ -42,7 +53,7 @@ export default Index;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    allMdx(
       limit: 2000
       sort: { fields: [fields___date], order: DESC }
     ) {
@@ -54,7 +65,7 @@ export const pageQuery = graphql`
           }
           excerpt
           timeToRead
-          rawMarkdownBody
+          body
           frontmatter {
             abstract
             draft

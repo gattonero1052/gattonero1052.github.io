@@ -12,7 +12,7 @@
  * We can use graphql to get the parameters we need
  *
  * The markdown data can be acquired in the following way by default
- * markdownQueryResult.data.allMarkdownRemark.edges
+ * markdownQueryResult.data.allMdx.edges
  *
  * after achieving this, we can create pages from these data using
  *
@@ -29,13 +29,41 @@ const _ = require("lodash");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
+  let {replaceWebpackConfig} = actions
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /valine|leancloud/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+
+  const config = getConfig()
+
+  config.module.rules.push({
+    test: /\.worker\.js$/,
+    use: { loader: 'workerize-loader' }
+  })
+
+  config.output.globalObject = 'this'
+
+  replaceWebpackConfig(config)
+}
+
 exports.onCreateNode = ({node, actions, getNode}) => {
   const {createNodeField} = actions;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === "Mdx") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     const hasFrontMatter =  Object.prototype.hasOwnProperty.call(node, "frontmatter")
+    // console.log(fileNode,hasFrontMatter)
 
     //slug is the path of the page, can be provided directly in markdown file (full path like /someCategory/someArticle )
     //removed unnecessary logic, simply is that path of the markdown file is the path of the page
@@ -78,7 +106,7 @@ exports.createPages = async ({graphql, actions}) => {
   //in this case, tagged template is not allowed to use
   const markdownQueryResult = await graphql(`
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             next{
               fields{
@@ -117,18 +145,18 @@ exports.createPages = async ({graphql, actions}) => {
   const categorySet = new Set();
 
   //get all the pages
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = markdownQueryResult.data.allMdx.edges;
 
   postsEdges.sort((postA, postB) => {
-    const dateA = moment(
+    const dateA = postA.node.frontmatter.date?moment(
       postA.node.frontmatter.date,
       siteConfig.dateFromFormat
-    );
+    ):moment(postA.node.frontmatter.created)
 
-    const dateB = moment(
+    const dateB = postB.node.frontmatter.date?moment(
       postB.node.frontmatter.date,
       siteConfig.dateFromFormat
-    );
+    ):moment(postA.node.frontmatter.created);
 
     if (dateA.isBefore(dateB)) return 1;
     if (dateB.isBefore(dateA)) return -1;
@@ -137,6 +165,7 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   postsEdges.forEach((edge, index) => {
+    console.log(edge.node.frontmatter.created)
     //ignore drafts
     if (edge.node.frontmatter.draft) {
       return

@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link} from "gatsby";
 import './tags.css'
 import {useDrag} from "react-dnd";
 import {addChild} from "../Tree/treehelper";
+import _ from "lodash";
+import { navigate } from '@reach/router';
 
 const TAGS_OUTSIDE = '-1'
 
@@ -23,7 +25,34 @@ const getColor = (str)=>{
   return COLORS[sum%COLORS.length]
 }
 
-const PostListTag = ({tag,refresh})=>{
+const PostListTag = ({draggable,tag,hasLink,refresh,clickCb,removeTagCb,tagItemClass})=>{
+  const click = ()=> {
+    if (clickCb) clickCb(tag)
+    if(hasLink){
+      navigate(`/tags/${_.kebabCase(tag)}`);
+    }
+  }
+
+  const remover = <div className='tag-remove-wrapper' onClick={()=>removeTagCb(tag)}>
+    <div className='tag-remove'></div>
+  </div>
+
+  const color = getColor(tag)
+
+  if(!draggable){
+    return (
+      <div className='tag-item-wrapper'>
+        <div key={tag} onClick={click} className='tag-item'  style={{
+          color,...tagItemClass
+        }}>
+
+          {tag}
+        </div>
+        {removeTagCb?remover:''}
+      </div>
+    )
+  }
+
   const [{isDragging}, drag] = useDrag({
     item: {name: tag, type: TAGS_OUTSIDE},
     end: (item, monitor) => {
@@ -38,30 +67,30 @@ const PostListTag = ({tag,refresh})=>{
     }),
   })
 
-  const color = getColor(tag)
-
   const opacity = isDragging ? 0.4 : 1
 
   return (
-    <div ref={drag} key={tag} className='tag-item'  style={{
-      opacity, color
-    }}>
-      {tag}
+    <div className='tag-item-wrapper'>
+      <div ref={drag} key={tag} onClick={click} className='tag-item'  style={{
+        opacity, color
+      }}>
+        {tag}
+      </div>
+      {removeTagCb?remover:''}
     </div>
   )
 }
-const PostListTags =({tags,refresh})=>{
 
+const PostListTags =({draggable,hasLink,tags=[],refresh,clickCb,removeTagCb,tagItemClass})=>{
+  const props = {draggable,hasLink,tags,refresh,clickCb,removeTagCb,tagItemClass}
   return (<div className='tag-list'>
       {tags.map(tag=>{
         return (
-        <PostListTag key={tag} tag={tag} refresh={refresh}/>
+        <PostListTag  key={tag} tag={tag} {...props} />
         )})}
     </div>)
 }
 
-
-
 export {getColor}
 
-export {PostListTags,TAGS_OUTSIDE}
+export {PostListTags,PostListTag,TAGS_OUTSIDE}

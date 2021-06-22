@@ -1,7 +1,7 @@
 .tag-item{
+    display: inline-block;
     background-color:white;
     cursor:pointer;
-    display: inline-block;
     opacity: .5;
     border-radius: 9999px;
     border: solid 2px;
@@ -14,6 +14,17 @@
     margin:5px 10px;
     transition: opacity,background-color 300ms ease-in-out;
 }
+.tag-item-wrapper{
+    display: inline-block;
+}
+
+.tag-remove-wrapper:hover{
+    opacity: 1!important;
+}
+
+.tag-item-wrapper:hover .tag-remove-wrapper{
+    opacity: .5;
+}
 
 .tag-item:hover{
     background-color: #eee;
@@ -23,4 +34,31 @@
 
 .tag-list{
     white-space: normal;
+}
+
+.tag-remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-remove-wrapper{
+    opacity: .0;
+    transition: opacity 400ms;
+    display: inline-block;
+    transform: translate(-4px,-7px);
+}
+
+.tag-remove {
+    background: #ddd;
+    color: #333;
+    border-radius: 50%;
+    line-height: 15px;
+    height: 15px;
+    width: 15px;
+    font-size: 7px;
+}
+
+.tag-remove::before {
+    content: "\2716";
 }

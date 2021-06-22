@@ -1,6 +1,9 @@
 import _ from 'lodash'
 import {getRoot,generate,firsrOrderTraverseConsumer} from '../Tree/treehelper'
-const NAME = `MSKf's Tree Blog V1.0`
+import {settings as DEFAULT_SETTING} from './constants'
+
+const TREE_NAME = `MSKf's Tree Blog V1.0 TREE`
+const BLOG_NAME = `MSKf's Tree Blog V1.0 BLOG`
 
 const isBrowser = ()=>{
   let hasWindow = 1
@@ -15,7 +18,7 @@ const isBrowser = ()=>{
 const getTree = ()=>{
   if(!isBrowser()) return
 
-  let str = window.localStorage.getItem(NAME)
+  let str = window.localStorage.getItem(TREE_NAME)
   let root = null
 
   if(!str){
@@ -57,7 +60,30 @@ const setTree = node=>{
   })
 
   let str = JSON.stringify(root)
-  window.localStorage.setItem(NAME,str)
+  window.localStorage.setItem(TREE_NAME,str)
 }
 
-export {getTree,setTree}
+
+const getBlogSetting = (name)=>{
+  if(!isBrowser()) return []
+
+  let str = window.localStorage.getItem(BLOG_NAME)
+  let settings = {}
+  if(!str){
+    settings = setBlogSetting()
+  }else{
+    settings = JSON.parse(str)
+  }
+  return settings[name]
+}
+
+//default settings
+const setBlogSetting = (settings = DEFAULT_SETTING)=>{
+  if(!isBrowser()) return
+
+  let str = JSON.stringify(settings)
+  window.localStorage.setItem(BLOG_NAME,str)
+  return settings
+}
+
+export {getTree,setTree,getBlogSetting,setBlogSetting}

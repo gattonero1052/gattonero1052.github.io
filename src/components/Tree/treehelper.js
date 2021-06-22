@@ -154,7 +154,6 @@ const getLines = (node)=>{
     })
 
     res=res.concat(getLines(node.children[i]))
-    console.log(res)
   }
 
   return res

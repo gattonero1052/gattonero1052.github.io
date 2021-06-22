@@ -4,18 +4,47 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
+import {PostListTags} from "../components/Tags/Tags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
 import "./post.css";
+// import "./themes/prism-okaidia.css"
+// import "./themes/prism.css"
+import "./themes/prism-twilight.css"
+import Valine from 'valine';
+const APP_ID = 'agYKv9ldJMM4QKMoA5cKc9df-MdYXbMMI'
+const APP_KEY = '0D9g85YcAg15lEiS8yme5JfL'
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { getBlogSetting } from "../components/Data/localstorage";
 
 export default class PostTemplate extends React.Component {
+  constructor(...args){
+    super(...args)
+    this.state = {}
+  }
+
+  componentDidMount() {
+      new Valine({
+        el: '#post_comments',
+        appId: APP_ID,
+        appKey: APP_KEY,
+        recordIP:true,
+        placeholder:'Comment me, my friend!'
+      })
+
+      //read default code style
+      let codeStyle = getBlogSetting('codeStyle')
+      console.log(codeStyle);
+      this.setState({
+        codeStyle
+      })
+  }
+
   render() {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
-    const postNode = data.markdownRemark;
+    const postNode = data.mdx;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -25,20 +54,30 @@ export default class PostTemplate extends React.Component {
     }
     return (
       <Layout>
-        <div>
+        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+        <div className='post-all'>
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <div className={`${this.state.codeStyle || ''}`}>
+            <h1>{post.title}
+              <div className="post-tags">
+                <PostListTags draggable={false} tags={post.tags} hasLink={true} tagItemClass={{
+                  opacity:1
+                }} />
+              </div>
+            </h1>
+            <MDXRenderer>{postNode.body}</MDXRenderer>
             <div className="post-meta">
-              <PostTags tags={post.tags} />
+              <div id="post_comments"></div>
               <SocialLinks postPath={slug} postNode={postNode} />
             </div>
             <UserInfo config={config} />
-            <Disqus postNode={postNode} />
+
+
+
+            {/*<Disqus postNode={postNode} />*/}
           </div>
         </div>
       </Layout>
@@ -49,8 +88,8 @@ export default class PostTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       timeToRead
       excerpt
       frontmatter {

@@ -6,18 +6,32 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width:100vw;
-    min-width: 110vh;
+    left:40vw;
+    width:20vw;
+    /*width:100vw;*/
+    /*min-width: 110vh;*/
     /*height:92vh;*/
 }
 
 .tree{
+    display: flex;
+    align-items: center;
     /*position: fixed;*/
     /*top:0;*/
     /*left:50vw;*/
     cursor:pointer;
-    width:7.5vw;
+    width: auto;
     height:60px;
+}
+
+.tree-title{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 35px;
+}
+
+.tree-filtering-tags{
+    display: inline-block;
 }
 
 .tree-panel{
@@ -94,7 +108,7 @@
 }
 
 .blink{
-    animation:twinkling 1s infinite ease-in-out;
+    animation:twinkling 1s ease-in-out;
 }
 
 @keyframes twinkling{

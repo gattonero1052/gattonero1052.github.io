@@ -3,6 +3,9 @@
 logs
 *.log
 npm-debug.log*
+.idea/
+.vscode/
+*.iml
 
 # Runtime data
 pids

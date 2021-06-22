@@ -44,9 +44,11 @@ module.exports = {
 
     //Parse Markdown File
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-plugin-mdx",
       options: {
-        plugins: [
+        extensions: ['.md','.mdx'],
+        plugins: [ `gatsby-remark-images` ],
+        gatsbyRemarkPlugins: [
 
           //compress images and add responsive images with srcset
           {
@@ -138,7 +140,7 @@ module.exports = {
       options: {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+          ret.allMdx = ref.query.allMdx;//allMarkdownRemark
           ret.generator = "GatsbyJS Advanced Starter";
           return ret;
         },
@@ -162,7 +164,7 @@ module.exports = {
           {
             serialize(ctx) {
               const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map(edge => ({
+              return ctx.query.allMdx.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
@@ -170,21 +172,21 @@ module.exports = {
                 url: rssMetadata.site_url + edge.node.fields.slug,
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
-                  { "content:encoded": edge.node.html },
+                  { "content:encoded": edge.node.body },
                   { author: config.userEmail }
                 ]
               }));
             },
             query: `
             {
-              allMarkdownRemark(
+              allMdx(
                 limit: 1000,
                 sort: { order: DESC, fields: [fields___date] },
               ) {
                 edges {
                   node {
                     excerpt
-                    html
+                    body
                     timeToRead
                     fields {
                       slug
