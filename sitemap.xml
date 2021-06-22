@@ -6,11 +6,11 @@
 <url> <loc>https://mskf.work/Game/poker-game</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/Java/java-generics-tricky-code</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/big-number-multiply</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/algorithm/find-integer-x-y-for-ax-by-c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/python-implementation-of-koch-snowflake</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/linked-list-cycle</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/algorithm/regular-expression-for-multiple-of-3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/algorithm/find-integer-x-y-for-ax-by-c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/swim-in-rising-water</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/algorithm/regular-expression-for-multiple-of-3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/combinations-and-permutations</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/reaching-points</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/algorithm/max-chunks-to-make-sorted-ii</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -40,9 +40,9 @@
 <url> <loc>https://mskf.work/tags/math/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/string/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/linkedlist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mskf.work/tags/greedy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/regular-expression/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/dfa/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mskf.work/tags/greedy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/combination/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/permutation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mskf.work/tags/bitwise/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
