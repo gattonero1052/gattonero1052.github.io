@@ -1,0 +1,54 @@
+:root {
+    --contentw:90%;
+    --maxw:1200px;
+    --minw:400px;
+    --text-color:rgb(31,18,53);
+    --project-color-1:#3da9fc;
+    --project-color-2:#ef4565;
+    --project-color-3:#fffffe;
+    --project-color-4:#90b4ce;
+    --project-color-5:#f9bc60;
+    --project-color-6:#e16162;
+    --bg-color:rgb(201,232,204);
+    --bg-dark-color:#2cb67d;
+}
+
+.header {
+    font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin:1rem auto;
+    width:var(--contentw);
+    max-width: var(--maxw);
+}
+
+.header .name{
+    font-weight: 700;
+    color: #333;
+    cursor: default;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-right{
+    display: flex;
+    justify-content: flex-end;
+    gap:2rem;
+}
+
+.header-right-item a{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header-right-link{
+
+}
+
+.header-right-minimal{
+    display: none;
+}

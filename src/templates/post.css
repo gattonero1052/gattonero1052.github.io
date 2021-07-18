@@ -1,0 +1,15 @@
+.post-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-tags {
+    position: relative;
+    float: right;
+    right:20px;
+}
+
+.post-all{
+    padding:20px;
+}

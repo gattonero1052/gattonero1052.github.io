@@ -1,0 +1,140 @@
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+ .rawlight code[class*="language-"],
+ .rawlight pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+.rawlight pre[class*="language-"]::-moz-selection, .rawlight pre[class*="language-"] ::-moz-selection,
+.rawlight code[class*="language-"]::-moz-selection, .rawlight code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+.rawlight pre[class*="language-"]::selection, .rawlight pre[class*="language-"] ::selection,
+.rawlight code[class*="language-"]::selection, .rawlight code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	.rawlight code[class*="language-"],
+	.rawlight pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+.rawlight pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+.rawlight :not(pre) > code[class*="language-"],
+.rawlight pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+.rawlight :not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.rawlight .token.comment,
+.rawlight .token.prolog,
+.rawlight .token.doctype,
+.rawlight .token.cdata {
+	color: slategray;
+}
+
+.rawlight .token.punctuation {
+	color: #999;
+}
+
+.rawlight .token.namespace {
+	opacity: .7;
+}
+
+.rawlight .token.property,
+.rawlight .token.tag,
+.rawlight .token.boolean,
+.rawlight .token.number,
+.rawlight .token.constant,
+.rawlight .token.symbol,
+.rawlight .token.deleted {
+	color: #905;
+}
+
+.rawlight .token.selector,
+.rawlight .token.attr-name,
+.rawlight .token.string,
+.rawlight .token.char,
+.rawlight .token.builtin,
+.rawlight .token.inserted {
+	color: #690;
+}
+
+.rawlight .token.operator,
+.rawlight .token.entity,
+.rawlight .token.url,
+.language-css .token.string,
+.rawlight .style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.rawlight .token.atrule,
+.rawlight .token.attr-value,
+.rawlight .token.keyword {
+	color: #07a;
+}
+
+.rawlight .token.function,
+.rawlight .token.class-name {
+	color: #DD4A68;
+}
+
+.rawlight .token.regex,
+.rawlight .token.important,
+.rawlight .token.variable {
+	color: #e90;
+}
+
+.rawlight .token.important,
+.rawlight .token.bold {
+	font-weight: bold;
+}
+.rawlight .token.italic {
+	font-style: italic;
+}
+
+.rawlight .token.entity {
+	cursor: help;
+}
