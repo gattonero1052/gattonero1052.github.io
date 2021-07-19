@@ -3,10 +3,9 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import './index.css'
+import './global.css'
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Footer from "../components/Footer"
 import Header from '../components/Header'
 
 const Tags = ({ items }) => {
@@ -92,27 +91,8 @@ const Projects = () => {
         {ProjectItems.map((item, i) => (<div key={i} className='project-item'>
           <div className="project-item-title">{item.title}</div>
           <div className="project-item-desc">{item.desc}</div>
-          <div className="project-item-button"><a href={item.btnLink} target="_blank">{item.btnText}</a></div>
+          <a href={item.btnLink} target="_blank"><div className="project-item-button">{item.btnText}</div></a>
         </div>))}
-      </div>
-    </div>
-  )
-}
-
-const Footer = () => {
-  return (
-    <div className="footer-container">
-      <div className="footer">
-        <div className="footer-left">
-          <div className="footer-left-top">Created by Liyi Zhang. Built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>.</div>
-          <div className="footer-left-bottom"></div>
-        </div>
-        <div className="footer-right">
-          <a href="mailto:gattonero1052@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} /></a>
-          <a href="https://github.com/gattonero1052/" target="_blank">
-            <FontAwesomeIcon icon={faGithub} /></a>
-        </div>
       </div>
     </div>
   )

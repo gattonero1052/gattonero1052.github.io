@@ -3,8 +3,10 @@ import React from 'react'
 import { graphql } from "gatsby";
 import { Link } from "gatsby"
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Layout from '../layout'
 import './posts.css'
+import './global.css'
 
 const Tags = ({ items }) => {
     return (<div className='tag-items'>
@@ -50,15 +52,16 @@ const Page = () => {
                     <div className="posts-item-top">
                         <div className="posts-item-title"><Link to={post?.node?.fields?.slug}>
                             {post?.node?.frontmatter?.title}
-                        </Link></div>
+                        </Link></div> 
                         <div className="posts-item-date">{post?.node?.frontmatter?.date}</div>
+                        <div className="posts-item-tags"><Tags items={post?.node?.frontmatter?.tags}/></div>
                     </div>
-                    <div className="posts-item-tags"><Tags items={post?.node?.frontmatter?.tags}/></div>
+
                     <div className="posts-item-abstract">{post?.node?.frontmatter?.abstract}</div>
                 </div>)
             })}
         </div>
-
+        <Footer></Footer>
     </Layout>)
 }
 

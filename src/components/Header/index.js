@@ -6,15 +6,15 @@ import './index.css'
 
 const DEFAULT_HEADER = [
   {
-    path: "posts",
+    path: "/posts",
     text: "Posts",
   },
+  // {
+  //   path: "#",
+  //   text: "Snippets",
+  // },
   {
-    path: "#",
-    text: "Snippets",
-  },
-  {
-    path: "#",
+    path: "/contact",
     text: "Contact",
   },
 ];
