@@ -1,5 +1,5 @@
 const fs = require('fs');
 
-fs.appendFile('public/CNAME', 'mskf.work', function (err) {
+fs.writeFile('public/CNAME', 'mskf.work', function (err) {
 });
 
