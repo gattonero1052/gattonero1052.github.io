@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-category-jsx","path":"/categories/bash/","result":{"data":{"allMdx":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/Bash/bash-scripting-examples","date":"2020-03-17T04:00:00.000Z"},"excerpt":"Bash scripting This is a problem oriented bash scripting post. For understanding what's going on and how the code works, it's of great help…","timeToRead":1,"frontmatter":{"title":"Bash Scripting Examples","tags":["bash"],"cover":"","date":"2020/3/17"}}}]}},"pageContext":{"category":"bash"}},"staticQueryHashes":[]}
+{
+    "componentChunkName": "component---src-templates-category-jsx",
+    "path": "/categories/bash/",
+    "result": {"data":{"allMdx":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/Bash/bash-scripting-examples","date":"2020-03-17T04:00:00.000Z"},"excerpt":"Bash scripting This is a problem oriented bash scripting post. For understanding what's going on and how the code works, it's of great help…","timeToRead":1,"frontmatter":{"title":"Bash Scripting Examples","tags":["bash"],"cover":"","date":"2020/3/17"}}}]}},"pageContext":{"category":"bash"}},
+    "staticQueryHashes": []}

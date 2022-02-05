@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-category-jsx","path":"/categories/frontend/","result":{"data":{"allMdx":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/FrontEnd/how-did-i-build-a-responsive-landing-page-using-tailwindcss","date":"2021-02-05T05:00:00.000Z"},"excerpt":"Environment, IDE, Tech stacks, Public resources NodeJS 12.20.0 VSCode React, tailwindcss dev.to Steps One day when I was busy living, I got…","timeToRead":2,"frontmatter":{"title":"How did I build a responsive Landing page using tailwindcss","tags":["2010","Frontend"],"cover":"","date":"2021/2/05"}}}]}},"pageContext":{"category":"Frontend"}},"staticQueryHashes":[]}
+{
+    "componentChunkName": "component---src-templates-category-jsx",
+    "path": "/categories/frontend/",
+    "result": {"data":{"allMdx":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/FrontEnd/how-did-i-build-a-responsive-landing-page-using-tailwindcss","date":"2021-02-05T05:00:00.000Z"},"excerpt":"Environment, IDE, Tech stacks, Public resources NodeJS 12.20.0 VSCode React, tailwindcss dev.to Steps One day when I was busy living, I got…","timeToRead":2,"frontmatter":{"title":"How did I build a responsive Landing page using tailwindcss","tags":["2010","Frontend"],"cover":"","date":"2021/2/05"}}}]}},"pageContext":{"category":"Frontend"}},
+    "staticQueryHashes": []}
